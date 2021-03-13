@@ -16,6 +16,9 @@ The microcontroller can be replaced by a Raspberry Pi, which is a supercomputer.
 Taser:
 The current handheld Taser will be upgraded to a ring structure, to allow for discrete defense. The ring will have twin capacitors to charge the ring, along with a capacitor charging apparatus that can be used to charge the ring before exiting the house. A miniature DC boost convertor will be attached to the ring in order to step up the voltage discharged by the capacitor and generate enough voltage to tase an individual. A switch will be provided to ensure that you don’t accidentally tase someone when you shake hands or the likes.
 
+## Flowchart: <br>
+<p align="center"><img src="Prototype/flowchart.jpeg" width="600" height="400"></p>
+
 ## Hardware: <br>
 <table>
   <tr>
