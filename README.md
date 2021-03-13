@@ -2,11 +2,18 @@
 
 <p align="center"><img src="UI images/saheli.png" width="300" height="300"></p>
 
-Women's Safety has been a century-old issue. Even today according to the statistics around 88 rape cases are reported every day and there are many cases that are not even reported. Only about 1.5% of cases are brought to justice while others are still free and a threat to other similar victims. The reason behind this is the lack of witnesses, proofs, corruption, and so on. Women are also motivated to learn self-defense but this is rendered useless in front of more than one abuser and their strength. 
+Safety device with Taser for protection, hidden camera device to incriminate offenders, an app to send SOS texts and current location, and a central server for police to track multiple users' locations.
 
 ## Implementation: 
-If the user feels that they are in danger, they tap the pushbutton on the neckpiece three times. This activates the HC05 Bluetooth module, which sends a character to the app through serial communication. (Note: The app/phone is already connected to the Bluetooth of the neckpiece). This activates the app, which proceeds to send SOS messages to the two emergency contacts which have been previously entered. It also sends the location coordinates. Live location tracking can be carried out through the app itself.
-Meanwhile, the three-tap trigger also activates the camera module in the neckpiece. We have used the OV7670 camera module here. We also have an SD Card breakout board that has an SDcard inserted in it. The camera module has been calibrated to generate color images in bitmap(.bmp) format. We have set it such that it generates 8 photos at a gap of two seconds each, for demonstration purposes. This can be adjusted for real-time situations. These photos are stored on the SD card. We can remove the SD card to view the photos on a PC or any other device. 
+Each day, nearly 90 cases of rape are reported in India. Indian courts have a backlog of more than 100,000 pending rape cases. The conviction rate is just 32%. The low conviction rates stem from a lack of solid, tangible evidence of the incident. It takes years at an end for rape victims to get their due justice, if at all they do.
+
+Our device, “Saheli”, aims to remedy that. Apps require them to be opened and devices are required to be held or taken out of pockets, bags, etc. Our device, on the other hand, is a wearable one which makes it faster and more efficient to use when needed. It has both attacking and defensive components. 3 taps of the device directly activate both the hardware and the app thus saving time. The three-tap system has also been put in place to prevent false warnings by accidental triggers.
+
+The user wears a neckpiece that has a pushbutton and a hidden camera in it. If the user feels that they are in danger of being attacked, they can press the pushbutton, which activates both the app and the OV7670 camera module. The app sends SOS messages, while the camera module takes images at fixed intervals, and saves them in the SD Card in bitmap format. The photos can be extracted from the card and used as incriminating evidence. We also have a website that uses Google Maps API to mark all the users in danger that will help the police station know the people in the vicinity who need help. 
+
+Additionally, we have also designed a hand-held taser, which can generate up to 400kV. We have plans to eventually optimize the design, and create a ring embedded in fingerless gloves. The tasing mechanism and charging circuit will be embedded in the glove itself, so the taser will be entirely hands-free. A push-button will be employed to deploy the taser mechanism.
+
+Also, it is very pocket-friendly, with the whole device costing around Rs 500-600. Mass production will further reduce prices. Thus it will be easily accessible to a large majority of our population.
 
 ## Future Aspects
 
