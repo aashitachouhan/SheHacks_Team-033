@@ -19,20 +19,20 @@ The current handheld Taser will be upgraded to a ring structure, to allow for di
 ## Hardware: <br>
 <table>
   <tr>
-    <td> <img src="hardware images/model1.jpeg" width="200" height="400"></td>
-    <td> <img src="hardware images/model2.jpeg" width="200" height="400"></td>
-     <td> <img src="hardware images/pcb.jpeg" width="200" height="400"></td>
+    <td> <img src="hardware images/model1.jpeg" width="100" height="100"></td>
+    <td> <img src="hardware images/model2.jpeg" width="100" height="100"></td>
+     <td> <img src="hardware images/pcb.jpeg" width="100" height="100"></td>
   </tr>
   <tr>
-    <td> <img src="hardware images/circuit1.jpeg" width="200" height="400"></td>
-    <td> <img src="hardware images/circuit2.jpeg" width="200" height="400"></td>
-     <td> <img src="hardware images/circuit3.jpeg" width="200" height="400"></td>
+    <td> <img src="hardware images/circuit1.jpeg" width="100" height="100"></td>
+    <td> <img src="hardware images/circuit2.jpeg" width="100" height="100"></td>
+     <td> <img src="hardware images/circuit3.jpeg" width="100" height="100"></td>
 
   </tr>
   <tr>
-   <td> <img src="hardware images/hardware1.jpeg" width="200" height="400"></td>
-    <td> <img src="hardware images/hardware2.jpeg" width="200" height="400"></td>
-     <td> <img src="hardware images/hardware3.jpeg" width="200" height="400"></td>
+   <td> <img src="hardware images/hardware1.jpeg" width="100" height="100"></td>
+    <td> <img src="hardware images/hardware2.jpeg" width="100" height="100"></td>
+     <td> <img src="hardware images/hardware3.jpeg" width="100" height="100"></td>
   </tr>
 </table>
 
