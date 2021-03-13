@@ -44,15 +44,15 @@ The current handheld Taser will be upgraded to a ring structure, to allow for di
   <tr>
     <td> <img src="UI images/phone.jpeg" width="250" height="500"></td>
     <td> <img src="UI images/otp.jpeg" width="250" height="500"></td>
+        <td> <img src="UI images/profile.jpeg" width="250" height="500"></td>
+
   </tr>
   <tr>
-    <td> <img src="UI images/profile.jpeg" width="250" height="500"></td>
     <td> <img src="UI images/mainpage.jpeg" width="250" height="500"></td>
-  </tr>
-  <tr>
-    <td> <img src="UI images/explicit.jpeg" width="250" height="500"></td>
+  <td> <img src="UI images/explicit.jpeg" width="250" height="500"></td>
     <td> <img src="UI images/implicit.jpeg" width="250" height="500"></td>
   </tr>
+  
 </table>
 
 ## Authors
