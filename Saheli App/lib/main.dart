@@ -1,4 +1,5 @@
 
+import 'package:fitbit_safe/MobileAuth/Authservice.dart';
 import 'package:fitbit_safe/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -15,8 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(accentColor:  Color(0xffD02850),buttonColor: Color(0xffD02850),),
-      home: Profile(),
+      theme: ThemeData(accentColor:  Color(0xffD02850),buttonColor: Color(0xffD02850),primaryColor: Color(0xffD02850)),
+      home: AuthService().handleAuth(),
     );
   }
 }

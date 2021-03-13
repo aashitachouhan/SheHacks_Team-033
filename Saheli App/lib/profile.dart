@@ -1,7 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:saheli/heading.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitbit_safe/SOS%20/Sosimplicit.dart';
+import 'package:fitbit_safe/bluetooth/bluetoothDetails.dart';
+import 'package:fitbit_safe/heading.dart';
+import 'package:fitbit_safe/SOS%20/sosexplicit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class Profile extends StatefulWidget {
   @override
@@ -23,7 +29,7 @@ class _ProfileState extends State<Profile> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xffD02850),
+        backgroundColor: Theme.of(context).primaryColor,
         title: Center(
           child: Text(
             "Profile",
@@ -42,11 +48,11 @@ class _ProfileState extends State<Profile> {
             ),
             Container(
               decoration: BoxDecoration(
-                  color: Color(0xffD02850),
+                  color: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.all(Radius.circular(40)),
                   border: Border.all(
                     width: 3,
-                    color: Color(0xffD02850),
+                    color: Theme.of(context).primaryColor,
                   )),
               child: SizedBox(
                 height: h*0.57,
@@ -88,7 +94,7 @@ class _ProfileState extends State<Profile> {
                                 },
                                 controller: name,
                                 keyboardType: TextInputType.name,
-                                cursorColor: Color(0xffD02850),
+                                cursorColor: Theme.of(context).primaryColor,
                                 maxLength: 30,
                                 maxLengthEnforced: true,
                                 decoration: new InputDecoration(
@@ -210,7 +216,7 @@ class _ProfileState extends State<Profile> {
                                 },
                                 controller: phone1,
                                 keyboardType: TextInputType.phone,
-                                cursorColor: Color(0xffD02850),
+                                cursorColor: Theme.of(context).primaryColor,
                                 maxLength: 10,
                                 maxLengthEnforced: true,
                                 decoration: new InputDecoration(
@@ -266,7 +272,7 @@ class _ProfileState extends State<Profile> {
                                 },
                                 controller: phone2,
                                 keyboardType: TextInputType.phone,
-                                cursorColor: Color(0xffD02850),
+                                cursorColor: Theme.of(context).primaryColor,
                                 maxLength: 10,
                                 maxLengthEnforced: true,
                                 decoration: new InputDecoration(
@@ -307,15 +313,18 @@ class _ProfileState extends State<Profile> {
                   ),
                   onPressed: () {
                     FirebaseFirestore.instance
-                        .collection("fitbit")
-                        .doc("profile")
+                        .collection("Profile")
+                        .doc(FirebaseAuth.instance.currentUser.phoneNumber)
                         .set({
                       "name": name.text,
                       "phone1": "+91" + phone1.text,
                       "phone2": "+91" + phone2.text,
                       "avatar": avatar ? "a1" : "a2"
                     });
-                    
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => MainPage()));
                   },
                   child: Padding(
                     padding: EdgeInsets.all(w * (0.03)),

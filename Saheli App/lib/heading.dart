@@ -15,7 +15,7 @@ class heading extends StatelessWidget {
               text: 'SAHEL ',
               style: GoogleFonts.galdeano(
                   textStyle: TextStyle(
-                      color: Color(0xffD02850),
+                      color: Theme.of(context).primaryColor,
                       fontSize: h*0.056,
                       fontWeight: FontWeight.bold))),
           TextSpan(

@@ -1,4 +1,6 @@
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fitbit_safe/bluetooth/bluetoothDetails.dart';
+import 'package:fitbit_safe/profile.dart';
 import 'package:flutter/material.dart';
 
 class Sosimplicit extends StatefulWidget {
@@ -19,10 +21,10 @@ class _SosimplicitState extends State<Sosimplicit> {
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (BuildContext context) => MainPage()));
         },),
-        backgroundColor: Color(0xffD02850),
+        backgroundColor: Theme.of(context).primaryColor,
         title: Padding(padding:EdgeInsets.symmetric(horizontal: w*(0.03)),child: Text("Emergency!",style: TextStyle(color: Colors.white,fontSize: 25),)),
       ),
-      backgroundColor:Color(0xffD02850) ,
+      backgroundColor:Theme.of(context).primaryColor ,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -32,7 +34,16 @@ class _SosimplicitState extends State<Sosimplicit> {
               child: GestureDetector(
                 child: Image.asset("image/whiesos.png"),
                 onTap: () {
-               
+                /*  FirebaseFirestore.instance
+                      .collection("fitbit")
+                      .doc("location").set({
+                    "current": new GeoPoint(
+                        0, 0)
+                  });*/
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) =>MainPage()));
+
                 },
               ),
             ),
