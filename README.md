@@ -54,6 +54,7 @@ The current handheld Taser will be upgraded to a ring structure, to allow for di
   </tr>
   
 </table>
+<p align="center"><img src="UI images/map.jpeg" width= "700" height="400"></p>
 
 ## Authors
 
