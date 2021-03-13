@@ -26,28 +26,34 @@
         <div id="map"></div>
         <script>
             function initMap() {
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 3,
-                    center: { lat: 23.10, lng: 72.32 },
-                });
-                const labels = "ASTS";
-                const markers = locations.map((location, i) => {
-                    return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length],
-                    });
-                });
-                new MarkerClusterer(map, markers, {
-                    imagePath:
-                    "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-                });
-                }
-                const locations = [
-                { lat: 19.0760, lng: 72.8777 },
-                { lat: 19.0330, lng: 73.0297 },
-                { lat: 18.5204, lng: 73.8567 },
-                { lat: 15.2993, lng: 74.1240 },    
-            ];
+				const map = new google.maps.Map(
+					document.getElementById('map'),
+					{
+						zoom: 3,
+						center: { lat: 23.1, lng: 72.32 },
+					}
+				);
+
+				document.querySelector('#map').addEventListener('click', () => {
+					const locations = [
+						{ lat: 19.076, lng: 72.8777 },
+						{ lat: 19.033, lng: 73.0297 },
+						{ lat: 18.5204, lng: 73.8567 },
+						{ lat: 15.2993, lng: 74.124 },
+					];
+					const labels = 'ASTS';
+					const markers = locations.map((location, i) => {
+						return new google.maps.Marker({
+							position: location,
+							label: labels[i % labels.length],
+						});
+					});
+					new MarkerClusterer(map, markers, {
+						imagePath:
+							'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+					});
+				});
+			}
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" async></script>
         <script>
